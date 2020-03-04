@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <!--        you have to add a layout under cardview to be able to position the objects-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="24dp">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="24dp"
+                android:text="@string/addtitle"
+                android:textSize="18dp" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/enter_item"
+                android:layout_below="@+id/title"
+                android:hint="Item name"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/qty"
+                android:inputType="number"
+                android:hint="@string/enter_the_quantity"
+                android:layout_below="@+id/enter_item"/>
+            <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/color"
+            android:hint="@string/select_a_color_for_the_item"
+            android:layout_below="@+id/qty"/>
+<!--using xml we can also specify the input type of the edit text do the users exactly know what to enter-->
+            <EditText
+            android:layout_width="match_parent"
+                android:inputType="number"
+            android:layout_height="wrap_content"
+            android:id="@+id/size"
+            android:hint="@string/enter_the_size"
+            android:layout_below="@+id/color"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/size"
+                android:text="@string/save_item"
+                android:textSize="18dp"
+                android:id="@+id/saveButton"
+                />
+
+
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
